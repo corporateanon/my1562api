@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title><![CDATA[ПтаАР по пров.  Титаренківський, 4]]></title>
+    <link>http://www.1562.kharkov.ua/uk/ppr/rss?street_id=2334&amp;building=4</link>
+    <description><![CDATA[]]></description>
+    <pubDate>Sat, 28 Dec 2019 12:19:25 +0200</pubDate>
+    <lastBuildDate>Sat, 28 Dec 2019 12:19:25 +0200</lastBuildDate>
+    <managingEditor>(1562.kharkov.ua)</managingEditor>
+    <generator>Zend Framework Zend_Feed</generator>
+    <language>uk</language>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <item>
+      <title><![CDATA[ПтаАР с 28 грудня 2019, 09:00 по 28 грудня 2019, 20:00 : авар. (КП Вода)]]></title>
+      <link>http://www.1562.kharkov.ua/uk/ppr/index?street_id=2334&amp;building=4&amp;id=733796</link>
+      <description><![CDATA[Производимые работы: Устранение повреждения на магистрали.]]></description>
+      <pubDate>Sat, 28 Dec 2019 09:45:24 +0200</pubDate>
+    </item>
+  </channel>
+</rss>

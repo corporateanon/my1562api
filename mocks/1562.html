@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Description" content="Харківська міська диспетчерська служба 1562" >
+	<link rel="alternate" type="application/rss+xml" title="1562" href="/uk/feed" />
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link href="/styles/plugins.min.css" media="all" rel="stylesheet" type="text/css" >
+<link href="/skin_new/main.css" media="all" rel="stylesheet" type="text/css" >
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+    //<!--
+var baseurl=''; var lang='uk';    //-->
+</script>
+<script type="text/javascript" src="/js/ui/ui.core.js"></script>
+<script type="text/javascript" src="/js/plugins.min.js"></script>
+<script type="text/javascript" src="/js/1562.js"></script>
+<script type="text/javascript" src="https://e2c.infocity.kharkov.ua/api/set_coc"></script>
+<script type="text/javascript" src="/js/portalAuth.js"></script>
+<script type="text/javascript" src="/js/ui.datepicker-uk.js"></script>
+	<script type='text/javascript'>$(document).ready(function(){
+$('#myAccordion').find('h2').click(function() {
+							$(this).next().toggle('fast');
+							return false;
+						}).next().hide();
+$('.required, #searchPprForm #street-label').append('<span class="form-required"> *</span>'); $('#street-element input#street').after('<span class="input_street_note">* введіть як мінімум три букви назви вулиці без цифр і виберіть потрібний варіант</span>');
+$("#street").autocomplete({url:"uk/ppr/street/", formatResult: autocompleteFormatResult, formatItem: autocompleteFormatItem, matchCase: 1, delay: 500, minChars: 3  })
+accountBoxPrevalidate();
+initAuth();
+$('.time').jclock({});
+$("#goTopLink").click(function(){history.back(1); return false;})
+$('.customDate').datepicker({dateFormat: 'yy-mm-dd', showOn: 'button', buttonImage: '/images/calendar.png', buttonImageOnly: true, firstDay: 1});});
+</script>
+	<title>Харківська міська диспетчерська служба 1562</title>
+	<base href="http://www.1562.kharkov.ua/" />
+</head>
+<body>
+ <!--[if lte IE 7]>
+  <div class="ie_wrap">
+	  <div class="ie">
+		  <h1 class="headline">ie_old</h1>
+		  <a href="http://microsoft.com/ie" target="_blank">ie_update</a>
+	  </div>
+  </div>
+<![endif]-->
+<div class="wrapper">
+	<div class="base">
+		<div class="main_row">
+			<ul class="navbar">
+				<li class="home"><a href="uk" title="На головну" >На головну</a></li>
+		<li><a href="/uk/ppr/index">Дороги та транспорт </a></li>
+	<li>пров.  Титаренківський 4</li>
+	
+			</ul>
+						<div class="content_row ">
+					
+<div class="wrap">
+	<h1 class="headline">Дороги та транспорт </h1>
+	<div class="plan_works_full">
+	<form id="searchPprForm" method="get" class="right_form_style" action="uk/ppr/index" allowEmpty="1" enctype="application/x-www-form-urlencoded"><dl class="zend_form">
+<dt id="street-label"><label for="street" class="optional">Вулиця</label></dt>
+<dd id="street-element">
+<input type="text" name="street" id="street" value="пров.  Титаренківський"></dd>
+<dd class="row_three_el row_multy"><ul>
+<li><dl><dt id="building-label"><label for="building">№ будинку <span class="form-required">*</span></label></dt><dd id="building-element">
+<input type="text" name="building" id="building" value="4"></dd></dl></li></ul></dd>
+<dt id="street_id-label">&#160;</dt>
+<dd id="street_id-element">
+<input type="hidden" name="street_id" value="2334" id="street_id"></dd>
+<dt id="submit-label">&#160;</dt><dd id="submit-element">
+<input type="submit" name="submit" id="submit" value="Надіслати"></dd></dl></form>
+						<table>
+				<thead>
+				<tr>
+					<th>Дата початку</th>
+					<th>Дата завершення</th>
+					<th>Організація</th>
+					<th>Тип робіт</th>
+					<th>Роботи</th>
+					<th>Останнє оновлення</th>
+				</tr>
+				</thead>
+				<tbody>
+								<tr>
+					<td>
+						28 грудня 2019, 09:00
+					</td>
+					<td>
+						28 грудня 2019, 20:00
+					</td>
+					<td>
+						КП Вода
+					</td>
+					<td>
+						авар.
+					</td>
+					<td>
+						Устранение повреждения на магистрали.
+					</td>
+					<td>
+						28 грудня 2019, 09:45
+					</td>
+				</tr>
+								</tbody>
+			</table>
+		
+		<div><br /><a href="/uk/ppr/rss?street_id=2334&amp;building=4"><img src="/images/feed.png" valign="middle" /> Подписаться на RSS для этого адреса</a></div>
+			</div>
+</div>
+				<a href="#" id="goTopLink">назад</a>
+			</div>
+			<div class="primary_row">
+								<div class="personalOffice">
+	<h2 class="headline ver_2">Особистий кабінет</h2>
+	<div class="personalOffice_wrap">
+			<div class="login_form"><form id="accountBox_form" enctype="application/x-www-form-urlencoded" method="post" action="uk/index/signin"><dl class="zend_form">
+<dt id="login-label"><label for="login" class="required">E-mail</label></dt>
+<dd id="login-element">
+<input type="text" name="login" id="login" value=""></dd>
+<dt id="password-label"><label for="password" class="required">Пароль</label></dt>
+<dd id="password-element">
+<input type="password" name="password" id="password" value=""></dd>
+<dt id="abpsubmit-label">&#160;</dt><dd id="abpsubmit-element">
+<input type="submit" name="abpsubmit" id="accountBox_submit" value="Вхід"></dd></dl></form></div>
+		<ul class="login_form_tools">
+			<li>
+				<a class="forgotPassword" href="/uk/index/password-reset" title="Забули пароль?">Забули пароль?</a>
+			</li>
+			<li>
+				<a class="signup" href="/uk/index/signup" title="Реєстрація">Реєстрація</a>
+			</li>
+		</ul>
+		</div>
+</div>
+<div class="personalOffice" id="portal_box" style="display:none;">
+	<div class="personalOffice_wrap">
+		<ul class="login_form_tools">
+			<li>
+				<a class="forgotPassword" href="#" id="portal_login" title="Войти через сайт Городского портала">Войти через сайт Городского портала</a>
+				<div id="check_portal_login" style="display: none;" title=""></div>
+			</li>
+		</ul>
+	</div>
+</div>
+	<ul class="img_list">
+		<li><a href="/uk/order/index"><img src="/images/zayavka.jpg" /></a></li>
+	</ul>
+
+				<div class="important">
+	<h2 class="headline">Важливо!</h2>
+	<ul>
+										<li><a  href="http://www.1562.kharkov.ua/uk/news/priyom-zayavok-dispetcherskoyu-sluzhboyu-1562-z-mobilnih-nomeriv-10362.html"><h2>Прийом заявок диспетчерською службою 1562 з мобільних номерів</h2></a></li>
+				<li><a rel="nofollow" target="_blank" href="http://www.oblenergo.kharkov.ua/8_grafik_gorod.htm">Відключення  АТ «Харківобленерго»</a></li>
+				<li><a rel="nofollow" target="_blank" href="http://gorsvet.kh.ua/%d0%bd%d0%be%d0%b2%d0%b8%d0%bd%d0%b8/">Відключення КП "Міськсвітло"</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://khgor.104.ua/ru/for-clients/do-uvagi-klijentiv">Відключення АТ "Харківмісьгаз"</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://vodokanal.kharkov.ua/news">Довідки про відключення систем холодного водопостачання</a></li>
+				<li><a rel="nofollow" target="_blank" href="http://www.hts.kharkov.ua/template.php?template=hotwateroff#start">Довідка про відключення систем гарячого водопостачання</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://www.google.com/maps/d/viewer?mid=16g3PB0LSZYAsrrAuiXZuxEBVaN0&amp%3Bll=49.55145643976209%2C36.528382299999976&amp%3Bz=8&ll=49.55145643976209%2C36.528382299999976&z=8">Захисні споруди цивільного захисту</a></li>
+				<li><a rel="nofollow" target="_blank" href="http://kharkiv.meteo.gov.ua/">Радіаційний стан навколишнього середовища у м. Харкові.</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://safe.city.kharkov.ua/">Сайт "Харків проти наркотиків"</a></li>
+						
+
+</div>
+				 								<!-- div class="claim_status">
+									</div -->
+
+				
+				<div class="weather">
+<h2 class="headline ver_2">Погода</h2>
+<ul id="informer2" class="weather_list">
+			<li>
+			Сб,
+			ніч
+			+2 .. +4 &deg;C
+			<img src="/images/weather/3n.gif" />		</li>
+			<li>
+			Сб,
+			ранок
+			+2 .. +4 &deg;C
+			<img src="/images/weather/3.gif" />		</li>
+			<li>
+			Сб,
+			день
+			+2 .. +4 &deg;C
+			<img src="/images/weather/4.gif" />		</li>
+			<li>
+			Сб,
+			вечір
+			0 .. +2 &deg;C
+			<img src="/images/weather/4n.gif" />		</li>
+	</ul>
+</div>
+				
+				<ul class="img_list"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adsense3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:240px;height:250px"
+     data-ad-client="ca-pub-5784358557176157"
+     data-ad-slot="7344418821"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adsense3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:240px;height:250px"
+     data-ad-client="ca-pub-5784358557176157"
+     data-ad-slot="7344418821"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></ul>
+			</div>
+			<div class="b_big">
+				<ul class="img_list"></ul>
+			</div>
+		</div>
+		<div class="header">
+			<a class="logo uk fn org url work" href="/uk/" rel="index"
+					title="Харківська міська диспетчерська служба 1562">Харківська міська диспетчерська служба 1562</a>
+			<a class="logo2" href="/uk/" rel="index"
+					title="Харківська міська диспетчерська служба 1562">Номер для дозвону в службу: 1562 - зі стаціонарних та мобільних</a>
+						<ul class="auxiliary_menu">
+				<li><a class="linkHome" href="/uk/"
+						title="На головну"><span>&#160;</span>На головну</a>
+				</li>
+				<!--<li><a class="feedback_admin" href="/uk/feedback/index"
+						title="Запитання адміністрації сайту"><span>&#160;</span>Запитання адміністрації сайту</a>
+				</li>-->
+				<li><a class="sitemap_ico" href="/uk/sitemap/index"
+						title="Мапа сайту"><span>&#160;</span>Мапа сайту</a>
+				</li>
+			</ul>
+						<form enctype="application/x-www-form-urlencoded" method="get" action="/uk/search/index/">
+				<dl class="search">
+					<dt><label for="qstring_quick">Поиск</label></dt>
+					<dd><input name="qstring" id="qstring_quick" value="Пошук" type="text"
+							onfocus="if (this.value=='Пошук') this.value=''"
+							onblur="if (this.value=='') this.value='Пошук'" /></dd>
+					<dt><label for="search_submit">Искать</label></dt>
+					<dd><input type="submit" name="search_submit" id="search_submit" value="" title="Искать" /></dd>
+				</dl>
+			</form>
+			
+			<ul class="nav" id="menu"><li class="progeny num1"><a href="/uk/article/view/id/543/"  title="Служба 1562">Служба 1562</a>
+			<ul>
+			<li ><a href="/uk/article/view/id/1049/"  title="Довідка по роботі з сайтом">Довідка по роботі з сайтом</a>
+	</li>
+<li ><a href="/uk/article/view/id/1045/"  title="Про диспетчерську службу 1562">Про диспетчерську службу 1562</a>
+	</li>
+<li ><a href="/uk/ppr/map/"  title="Карта звернень до служби 1562">Карта звернень до служби 1562</a>
+	</li>
+<li ><a href="http://www.1562.kharkov.ua/uk/ppr/index?street=" rel="nofollow" target="_blank" title="Планові та аварійні роботи">Планові та аварійні роботи</a>
+	</li>
+		</ul>
+	</li>
+<li class="progeny num2"><a href="/uk/profile/order/index/"  title="Заявки">Заявки</a>
+			<ul>
+			<li ><a href="/uk/profile/order/index/"  title="Подати заявку">Подати заявку</a>
+	</li>
+<li ><a href="/uk/card/index/"  title="Перевірити статус заявки">Перевірити статус заявки</a>
+	</li>
+		</ul>
+	</li>
+<li ><a href="http://www.1562.kharkov.ua/uk/ppr/index?street=" rel="nofollow" target="_blank" title="Планові та аварійні роботи">Планові та аварійні роботи</a>
+	</li>
+<li class="progeny num3"><a href="/uk/news/index/"  title="Новини">Новини</a>
+			<ul>
+			<li ><a href="https://www.city.kharkov.ua/uk/novosti.html" rel="nofollow" target="_blank" title="Харківська міська рада">Харківська міська рада</a>
+	</li>
+<li ><a href="https://kh.dsns.gov.ua/ua/nadzvichayni-podiyi/" rel="nofollow" target="_blank" title="ГУ ДСНС">ГУ ДСНС</a>
+	</li>
+<li ><a href="https://hk.npu.gov.ua/news/" rel="nofollow" target="_blank" title="ГУ НП">ГУ НП</a>
+	</li>
+<li ><a href="https://www.oblenergo.kharkov.ua/" rel="nofollow" target="_blank" title="АТ &quot;Харківобленерго&quot;">АТ "Харківобленерго"</a>
+	</li>
+<li ><a href="https://khgor.104.ua/ua/for-clients/news" rel="nofollow" target="_blank" title="АТ &quot;Харківміськгаз&quot;">АТ "Харківміськгаз"</a>
+	</li>
+<li ><a href="http://www.hts.kharkov.ua/template.php?template=operinformation#start" rel="nofollow" target="_blank" title="КП &quot;Харківські теплові мережі&quot;">КП "Харківські теплові мережі"</a>
+	</li>
+<li ><a href="https://vodokanal.kharkov.ua/news" rel="nofollow" target="_blank" title="КП &quot;Харківводоканал&quot;">КП "Харківводоканал"</a>
+	</li>
+<li ><a href="http://labcenter.kh.ua/" rel="nofollow" target="_blank" title="ДУ &quot;Харківський обласний лабораторний центр МОЗ України&quot;">ДУ "Харківський обласний лабораторний центр МОЗ України"</a>
+	</li>
+<li ><a href="http://www.metro.kharkov.ua/ru/index/index/" rel="nofollow" target="_blank" title="КП &quot;Харківський метрополітен&quot;">КП "Харківський метрополітен"</a>
+	</li>
+		</ul>
+	</li>
+<li ><a href="/uk/tariff/index/"  title="Тарифи">Тарифи</a>
+	</li>
+<li class="progeny num4"><a href="/uk/mainmenu/index/id/235/"  title="Корисна інформація">Корисна інформація</a>
+			<ul>
+			<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/ekstrennyie-telefonyi.html" rel="nofollow" target="_blank" title="Екстрені телефони">Екстрені телефони</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/gorodskaya-vlast/ispolnitelnyie-organyi/departamentyi.html" rel="nofollow" target="_blank" title="Структура та керівництво Департаментів Харківської міської ради">Структура та керівництво Департаментів Харківської міської ради</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/gorodskaya-vlast/ispolnitelnyie-organyi/rajonnyie-administraczii.html" rel="nofollow" target="_blank" title="Районні адміністрації">Районні адміністрації</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/kommunalnyie-predpriyatiya.html" rel="nofollow" target="_blank" title="Комунальні підприємства">Комунальні підприємства</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/transport/avtobusi.html" rel="nofollow" target="_blank" title="Громадський транспорт">Громадський транспорт</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/index/hotline.html" rel="nofollow" target="_blank" title="&quot;Гарячі лінії&quot; районів">"Гарячі лінії" районів</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/mediczinskie-uchrezhdeniya.html" rel="nofollow" target="_blank" title="Медичні установи">Медичні установи</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/detskie-sadyi.html" rel="nofollow" target="_blank" title="Дитячі садки">Дитячі садки</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/shkolyi.html" rel="nofollow" target="_blank" title="Школи">Школи</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/vuzyi.html" rel="nofollow" target="_blank" title="Вищі навчальні заклади">Вищі навчальні заклади</a>
+	</li>
+<li ><a href="https://www.city.kharkov.ua/uk/dovdnik/subsidii.html" rel="nofollow" target="_blank" title="Інформація про програму житлових субсидій ">Інформація про програму житлових субсидій </a>
+	</li>
+<li ><a href="http://kharkiv.meteo.gov.ua/klimat-kharkova/" rel="nofollow" target="_blank" title="Клімат Харкова">Клімат Харкова</a>
+	</li>
+<li class="progeny num5"><a href="/uk/mainmenu/index/id/236/"  title="Статті">Статті</a>
+			<ul>
+					</ul>
+	</li>
+<li class="progeny num6"><a href="/uk/mainmenu/index/id/289/"  title="Консультації">Консультації</a>
+			<ul>
+					</ul>
+	</li>
+		</ul>
+	</li>
+</ul>
+
+					</div>
+		
+		<div class="footer">
+			<div class="copy">
+				<p>					Всі права на матеріали належать <br />Міському інформаційному центру © 2009-2019
+				</p>
+			</div>
+			<!-- MyCounter v.2.0 -->
+			<div style="text-align: center">
+<script type="text/javascript"><!--
+my_id = 169283;
+my_width = 88;
+my_height = 41;
+my_alt = "MyCounter - счётчик и статистика";
+//--></script>
+<script type="text/javascript"
+  src="https://get.mycounter.ua/counter2.0.js">
+</script><noscript>
+<a target="_blank" href="https://mycounter.ua/"><img
+src="https://get.mycounter.ua/counter.php?id=169283"
+title="MyCounter - счётчик и статистика"
+alt="MyCounter - счётчик и статистика"
+width="88" height="41" border="0" /></a></noscript>
+</div>
+<!--/ MyCounter -->
+
+			<dl class="design">
+				<dt>Розробка та підтримка</dt>
+				<dd>
+					<a href="http://www.webdeco.com.ua" title="WebDeco" target="_blank">&#160;</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+</body>
+</html>
