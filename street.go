@@ -1,6 +1,10 @@
 package my1562api
 
+// StreetsList list of streets
+type StreetsList []Street
+
+// Street street from the 1562 database
 type Street struct {
-	Id   int
+	ID   int
 	Name string
 }

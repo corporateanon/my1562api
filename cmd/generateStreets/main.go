@@ -28,7 +28,8 @@ func main() {
 	results := re.FindAllStringSubmatch(bodyStr, 1e6)
 	fmt.Println("package my1562api")
 	fmt.Println("")
-	fmt.Print("var Streets = []Street{\n")
+	fmt.Println("// Streets list of all streets from 1562 database")
+	fmt.Print("var Streets = StreetsList{\n")
 	for _, item := range results {
 		id, err := strconv.Atoi(item[1])
 		if err != nil {

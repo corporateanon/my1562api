@@ -1,6 +1,7 @@
 package my1562api
 
-var Streets = []Street{
+// Streets list of all streets from 1562 database
+var Streets = StreetsList{
     {1976, "пл.   Героїв Небесної Сотні (Руднєва)"},
     {1999, "вул.   Ново-Садова (Фрунз.) (Садова)"},
     {1088, "вул.  2-14)"},
