@@ -12,10 +12,10 @@ import (
 
 func main() {
 	res, err := http.Get("http://www.1562.kharkov.ua/uk/ppr/street/?q=&limit=10000")
-	defer res.Body.Close()
 	if err != nil {
 		log.Fatalln("Could not get list")
 	}
+	defer res.Body.Close()
 	if res.StatusCode != 200 {
 		log.Fatalf("Could not get list. Status=%d\n", res.StatusCode)
 	}
@@ -28,14 +28,14 @@ func main() {
 	results := re.FindAllStringSubmatch(bodyStr, 1e6)
 	fmt.Println("package my1562api")
 	fmt.Println("")
-	fmt.Print("var Streets = []Street{")
+	fmt.Print("var Streets = []Street{\n")
 	for _, item := range results {
 		id, err := strconv.Atoi(item[1])
 		if err != nil {
 			log.Fatalf("Could not parse %s\n", item[1])
 		}
 		name := strings.TrimSpace(item[2])
-		fmt.Printf("{%d, \"%s\"}, ", id, name)
+		fmt.Printf("    {%d, \"%s\"},\n", id, name)
 	}
-	fmt.Print("}")
+	fmt.Print("}\n")
 }
