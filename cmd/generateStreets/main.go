@@ -35,7 +35,7 @@ func main() {
 			log.Fatalf("Could not parse %s\n", item[1])
 		}
 		name := strings.TrimSpace(item[2])
-		fmt.Printf("    {%d, \"%s\"},\n", id, name)
+		fmt.Printf("    {%d, %#v},\n", id, name)
 	}
 	fmt.Print("}\n")
 }
