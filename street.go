@@ -8,3 +8,5 @@ type Street struct {
 	ID   int
 	Name string
 }
+
+type StreetIndexMap map[int]int

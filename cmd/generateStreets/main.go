@@ -30,13 +30,25 @@ func main() {
 	fmt.Println("")
 	fmt.Println("// Streets list of all streets from 1562 database")
 	fmt.Print("var Streets = StreetsList{\n")
-	for _, item := range results {
+
+	streetIds := make([]int, len(results))
+
+	for i, item := range results {
 		id, err := strconv.Atoi(item[1])
 		if err != nil {
 			log.Fatalf("Could not parse %s\n", item[1])
 		}
+		streetIds[i] = id
 		name := strings.TrimSpace(item[2])
 		fmt.Printf("    {%d, %#v},\n", id, name)
 	}
 	fmt.Print("}\n")
+
+	fmt.Println("")
+	fmt.Print("var streetIndexById = StreetIndexMap{\n")
+	for i, id := range streetIds {
+		fmt.Printf("    %d: %d,\n", id, i)
+	}
+	fmt.Print("}\n")
+
 }

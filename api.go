@@ -70,3 +70,11 @@ func GetStreetSuggestions(q string) StreetSuggestionsList {
 	}
 	return suggestions
 }
+
+//GetStreetByID gets street object by its ID
+func GetStreetByID(streetID int) *Street {
+	if streetIndex, ok := streetIndexById[streetID]; ok {
+		return &Streets[streetIndex]
+	}
+	return nil
+}

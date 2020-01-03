@@ -68,3 +68,37 @@ func TestGetStreetSuggestions(t *testing.T) {
 		})
 	}
 }
+
+func TestGetStreetByID(t *testing.T) {
+	type args struct {
+		streetID int
+	}
+	tests := []struct {
+		name string
+		args args
+		want *Street
+	}{
+		{
+			"should return a street for id=200",
+			args{streetID: 200},
+			&Street{200, "вул.  Березівська"},
+		},
+		{
+			"should return a street for id=471",
+			args{streetID: 471},
+			&Street{471, "пров.  Гнєдича"},
+		},
+		{
+			"should return nil for id=10000",
+			args{streetID: 10000},
+			nil,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := GetStreetByID(tt.args.streetID); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("GetStreetByID() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
