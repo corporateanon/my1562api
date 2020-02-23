@@ -1,1 +1,0 @@
-go run cmd/generateStreets/main.go > streets.go

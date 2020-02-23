@@ -1,4 +1,4 @@
-package my1562api
+package client
 
 // StreetsList list of streets
 type StreetsList []Street
