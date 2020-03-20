@@ -1,16 +1,23 @@
 package client
 
 import (
+	"crypto/md5"
 	"fmt"
+	"io"
 
 	"github.com/antchfx/xmlquery"
 )
 
-// GetStatusAPIResponse Incident status
-type GetStatusAPIResponse struct {
-	HasMessage  bool
+type Message struct {
 	Title       string
 	Description string
+}
+
+// GetStatusAPIResponse Incident status
+type GetStatusAPIResponse struct {
+	HasMessage bool
+	Messages   []Message
+	Hash       string
 }
 
 // GetStatus gets current incident status message
@@ -23,20 +30,27 @@ func GetStatus(streetID int, building string) (*GetStatusAPIResponse, error) {
 		return nil, err
 	}
 
-	item := xmlquery.FindOne(node, "//rss/channel/item")
+	items := xmlquery.Find(node, "//rss/channel/item")
 
-	if item == nil {
-		status.HasMessage = false
-		status.Title = ""
-		status.Description = ""
-		return status, nil
+	messages := make([]Message, 0)
+
+	hash := md5.New()
+	for _, item := range items {
+		status.HasMessage = true
+		title := xmlquery.FindOne(item, "//title").InnerText()
+		description := xmlquery.FindOne(item, "//description").InnerText()
+
+		io.WriteString(hash, title)
+		io.WriteString(hash, description)
+
+		messages = append(messages, Message{
+			Title:       title,
+			Description: description,
+		})
 	}
 
-	title := xmlquery.FindOne(item, "//title").InnerText()
-	description := xmlquery.FindOne(item, "//description").InnerText()
-	status.HasMessage = true
-	status.Title = title
-	status.Description = description
+	status.Messages = messages
+	status.Hash = fmt.Sprintf("%x", hash.Sum(nil))
 
 	return status, nil
 }
